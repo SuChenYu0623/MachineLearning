@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 # 1. 資料前處理
 ## 1.1 資料讀取
 ## (這邊將前一天收盤價視為data， 當天則為預測值)
-df = pd.read_csv('TSM.csv')
+df = pd.read_csv('./data/TSM.csv')
 dates = pd.to_datetime(df['Date'], format='%Y-%m-%d', errors='ignore')
 data = df.iloc[:-1,[1]].values #這裡是以開盤價
 label = df.iloc[1:,4].values

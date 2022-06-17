@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 
 # 1. 資料前處理 (因為 LogisticRegression 是分類問題，所需要將標籤處理成兩類，漲與跌)
 ## 1.1 資料讀取與建立新標籤
-df = pd.read_csv('TSM.csv')
+df = pd.read_csv('./data/TSM.csv')
 dates = pd.to_datetime(df['Date'], format='%Y-%m-%d', errors='ignore')
 data = df.iloc[:-1,1:].values
 stock_prices = df.iloc[:,4].values # 真實股價
